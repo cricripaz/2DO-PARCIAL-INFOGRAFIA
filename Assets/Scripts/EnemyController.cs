@@ -48,4 +48,25 @@ public class EnemyController : MonoBehaviour
         }
 
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Player")
+        {
+          
+
+            if(transform.position.y < collision.transform.position.y)
+            {
+                collision.SendMessage("EnemyJump");
+                Destroy(gameObject);
+            }
+            else
+            {
+                collision.SendMessage("EnemyKnockBack",transform.position.x);
+            }
+            
+        }
+    }
 }
