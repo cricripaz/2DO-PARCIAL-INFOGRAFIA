@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class InicioJuego : MonoBehaviour
 {
 
-    private int indiceJuego = 1;
+    private int indiceJuego = 2;
     // Start is called before the first frame update
     void Start()
     {

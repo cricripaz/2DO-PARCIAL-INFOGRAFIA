@@ -61,5 +61,13 @@ public  class CambiarPersonaje : MonoBehaviour
     public void btnRight()
     {
 
+        cambiarPersonaje[index].SetActive(false);
+        index++;
+        if (index == cambiarPersonaje.Length)
+        {
+            index = 0;
+        }
+
+        cambiarPersonaje[index].SetActive(true);
     }
 }
